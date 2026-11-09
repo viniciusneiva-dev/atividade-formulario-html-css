@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Aluno</title>
+
+  <style>
+    /* Cor de fundo da página */
+    body {
+      background-color: #f3ede2;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    /* Título */
+    h1 {
+      color: #18594f;
+      text-align: center;
+      font-size: 32px;
+    }
+
+    /* Formulário centralizado */
+    form {
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      box-sizing: border-box;
+      border: 2px solid #18594f;
+      border-radius: 12px;
+    }
+
+    /* Organização dos grupos */
+    fieldset {
+      background-color: #f9f6f0;
+      border: 1px solid #79a69b;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    legend {
+      color: #18594f;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    /* Textos dos campos */
+    label {
+      display: block;
+      margin-top: 10px;
+      color: #25453f;
+    }
+
+    /* Campos do formulário */
+    input[type=text],
+    input[type=email],
+    input[type=password],
+    input[type=date],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      box-sizing: border-box;
+      border: 1px solid #79a69b;
+      border-radius: 6px;
+      background-color: white;
+      font-size: 15px;
+    }
+
+    /* Efeito ao selecionar o campo */
+    input:focus,
+    select:focus,
+    textarea:focus {
+      background-color: #e1f3eb;
+    }
+
+    /* Espaçamento das opções */
+    input[type=radio],
+    input[type=checkbox] {
+      margin-top: 10px;
+    }
+
+    /* Botões */
+    input[type=submit],
+    input[type=reset] {
+      background-color: #18594f;
+      color: white;
+      border: 1px solid #18594f;
+      border-radius: 6px;
+      padding: 12px;
+      margin-top: 15px;
+      font-size: 15px;
+    }
+
+    /* Efeito ao passar o mouse */
+    input[type=submit]:hover,
+    input[type=reset]:hover {
+      background-color: #d97735;
+      color: white;
+    }
+
+    /* Campo de comentários */
+    textarea {
+      resize: vertical;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Cadastro de Aluno</h1>
+
+<!-- Início do formulário -->
+<form>
+
+  <!-- Dados pessoais -->
+  <fieldset>
+    <legend>Dados Pessoais</legend>
+
+    <label for="nome">Nome completo:</label>
+    <input type="text" id="nome" name="nome"
+           placeholder="Digite seu nome completo"
+           minlength="3" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email"
+           placeholder="Digite seu e-mail" required>
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha"
+           minlength="6" placeholder="Digite sua senha"
+           required>
+
+    <label for="nascimento">Data de nascimento:</label>
+    <input type="date" id="nascimento"
+           name="nascimento" required>
+  </fieldset>
+
+  <!-- Dados acadêmicos -->
+  <fieldset>
+    <legend>Informações Acadêmicas</legend>
+
+    <label for="curso">Curso:</label>
+    <select id="curso" name="curso" required>
+      <option value="">Selecione seu curso</option>
+      <option value="engenharia">Engenharia de Software</option>
+      <option value="direito">Direito</option>
+      <option value="administracao">Administração</option>
+      <option value="psicologia">Psicologia</option>
+      <option value="contabeis">Ciências Contábeis</option>
+      <option value="enfermagem">Enfermagem</option>
+    </select>
+  </fieldset>
+
+  <!-- Sexo -->
+  <fieldset>
+    <legend>Sexo</legend>
+
+    <input type="radio" id="masculino"
+           name="sexo" value="masculino">
+    <label for="masculino">Masculino</label>
+
+    <input type="radio" id="feminino"
+           name="sexo" value="feminino">
+    <label for="feminino">Feminino</label>
+
+    <input type="radio" id="outro"
+           name="sexo" value="outro">
+    <label for="outro">Outro</label>
+
+    <input type="radio" id="naoinformar"
+           name="sexo" value="naoinformar">
+    <label for="naoinformar">Prefiro não informar</label>
+  </fieldset>
+
+  <!-- Interesses -->
+  <fieldset>
+    <legend>Interesses</legend>
+
+    <p>Selecione seus principais interesses:</p>
+
+    <input type="checkbox" id="futebol"
+           name="interesses" value="futebol">
+    <label for="futebol">Futebol</label>
+
+    <input type="checkbox" id="academia"
+           name="interesses" value="academia">
+    <label for="academia">Academia</label>
+
+    <input type="checkbox" id="tecnologia"
+           name="interesses" value="tecnologia">
+    <label for="tecnologia">Tecnologia</label>
+
+    <input type="checkbox" id="programacao"
+           name="interesses" value="programacao">
+    <label for="programacao">Programação</label>
+
+    <input type="checkbox" id="musica"
+           name="interesses" value="musica">
+    <label for="musica">Música</label>
+
+    <input type="checkbox" id="jogos"
+           name="interesses" value="jogos">
+    <label for="jogos">Jogos eletrônicos</label>
+
+    <input type="checkbox" id="filmes"
+           name="interesses" value="filmes">
+    <label for="filmes">Filmes e séries</label>
+
+    <input type="checkbox" id="viagens"
+           name="interesses" value="viagens">
+    <label for="viagens">Viagens</label>
+
+    <input type="checkbox" id="leitura"
+           name="interesses" value="leitura">
+    <label for="leitura">Leitura</label>
+
+    <input type="checkbox" id="empreendedorismo"
+           name="interesses" value="empreendedorismo">
+    <label for="empreendedorismo">Empreendedorismo</label>
+  </fieldset>
+
+  <!-- Informações adicionais -->
+  <fieldset>
+    <legend>Informações Adicionais</legend>
+
+    <label for="comentarios">Comentários:</label>
+    <textarea id="comentarios" name="comentarios"
+              rows="4"
+              placeholder="Deixe seu comentário"></textarea>
+
+    <label for="foto">Upload de foto:</label>
+    <input type="file" id="foto" name="foto"
+           accept="image/*">
+  </fieldset>
+
+  <!-- Botões do formulário -->
+  <input type="submit" value="Enviar Cadastro">
+  <input type="reset" value="Limpar Campos">
+
+</form>
+
+</body>
+</html>
