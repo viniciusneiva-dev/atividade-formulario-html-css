@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha de Inscrição</title>
+
+  <style>
+    body {
+      background-color: #e8ebe6;
+      font-family: Arial, sans-serif;
+      color: #333333;
+      margin: 25px;
+    }
+
+    h1 {
+      color: #395c47;
+      text-align: center;
+    }
+
+    form {
+      background-color: white;
+      width: 100%;
+      max-width: 550px;
+      margin: auto;
+      padding: 25px;
+      border: 1px solid #999999;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    fieldset {
+      border: 1px solid #aaaaaa;
+      padding: 20px;
+      margin-bottom: 25px;
+      border-radius: 5px;
+    }
+
+    legend {
+      color: #395c47;
+      font-weight: bold;
+      padding: 5px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 6px;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=password],
+    input[type=date],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 15px;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      background-color: #edf5e8;
+    }
+
+    h3 {
+      color: #395c47;
+      font-size: 16px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    /* Opções de sexo e interesses */
+    .opcoes {
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    .opcoes label {
+      display: inline-block;
+      margin: 0 18px 12px 4px;
+    }
+
+    .opcoes input {
+      margin: 0;
+    }
+
+    /* Campo da foto */
+    input[type=file] {
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    /* Botões */
+    input[type=submit],
+    input[type=reset] {
+      background-color: #395c47;
+      color: white;
+      padding: 11px 20px;
+      margin-right: 12px;
+      margin-top: 5px;
+      border: 1px solid #395c47;
+      border-radius: 5px;
+    }
+
+    input[type=submit]:hover,
+    input[type=reset]:hover {
+      background-color: #64856e;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Ficha de Inscrição</h1>
+
+<form>
+
+  <!-- Dados do aluno -->
+  <fieldset>
+    <legend>Dados do Aluno</legend>
+
+    <label for="nome">Nome completo:</label>
+    <input type="text" id="nome" name="nome"
+           placeholder="Digite seu nome completo"
+           minlength="3" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email"
+           placeholder="Digite seu e-mail" required>
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha"
+           placeholder="Crie uma senha"
+           minlength="6" required>
+
+    <label for="nascimento">Data de nascimento:</label>
+    <input type="date" id="nascimento"
+           name="nascimento" required>
+
+    <label for="curso">Curso desejado:</label>
+    <select id="curso" name="curso" required>
+      <option value="">Selecione seu curso</option>
+      <option value="software">Engenharia de Software</option>
+      <option value="ads">Análise e Desenvolvimento de Sistemas</option>
+      <option value="computacao">Ciência da Computação</option>
+      <option value="agronomia">Agronomia</option>
+      <option value="direito">Direito</option>
+      <option value="administracao">Administração</option>
+      <option value="contabeis">Ciências Contábeis</option>
+      <option value="medicina">Medicina</option>
+      <option value="veterinaria">Medicina Veterinária</option>
+      <option value="psicologia">Psicologia</option>
+      <option value="educacao">Educação Física</option>
+      <option value="arquitetura">Arquitetura e Urbanismo</option>
+    </select>
+
+    <h3>Sexo:</h3>
+
+    <div class="opcoes">
+      <input type="radio" id="masculino"
+             name="sexo" value="masculino">
+      <label for="masculino">Masculino</label>
+
+      <input type="radio" id="feminino"
+             name="sexo" value="feminino">
+      <label for="feminino">Feminino</label>
+
+      <input type="radio" id="outro"
+             name="sexo" value="outro">
+      <label for="outro">Outro</label>
+
+      <input type="radio" id="naoinformar"
+             name="sexo" value="naoinformar">
+      <label for="naoinformar">Prefiro não informar</label>
+    </div>
+  </fieldset>
+
+  <!-- Interesses -->
+  <fieldset>
+    <legend>Interesses</legend>
+
+    <p>Marque as opções de seu interesse:</p>
+
+    <div class="opcoes">
+      <input type="checkbox" id="futebol"
+             name="interesses" value="futebol">
+      <label for="futebol">Futebol</label>
+
+      <input type="checkbox" id="academia"
+             name="interesses" value="academia">
+      <label for="academia">Academia</label>
+
+      <input type="checkbox" id="tecnologia"
+             name="interesses" value="tecnologia">
+      <label for="tecnologia">Tecnologia</label>
+
+      <input type="checkbox" id="musica"
+             name="interesses" value="musica">
+      <label for="musica">Música</label>
+
+      <input type="checkbox" id="viagens"
+             name="interesses" value="viagens">
+      <label for="viagens">Viagens</label>
+    </div>
+  </fieldset>
+
+  <!-- Informações adicionais -->
+  <fieldset>
+    <legend>Informações Adicionais</legend>
+
+    <label for="comentarios">Comentários:</label>
+    <textarea id="comentarios" name="comentarios"
+              rows="4"
+              placeholder="Escreva seu comentário"></textarea>
+
+    <label for="foto">Enviar uma foto:</label>
+    <input type="file" id="foto" name="foto"
+           accept="image/*">
+  </fieldset>
+
+  <!-- Botões -->
+  <input type="submit" value="Enviar">
+  <input type="reset" value="Limpar">
+
+</form>
+
+</body>
+</html>
